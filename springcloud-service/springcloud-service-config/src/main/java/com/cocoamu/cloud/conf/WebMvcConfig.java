@@ -1,6 +1,6 @@
 package com.cocoamu.cloud.conf;
 
-import com.imooc.ecommerce.filter.LoginUserInfoInterceptor;
+import com.cocoamu.cloud.filter.LoginUserInfoInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
  * <h1>Web Mvc 配置</h1>
  * */
 @Configuration
-public class ImoocWebMvcConfig extends WebMvcConfigurationSupport {
+public class WebMvcConfig extends WebMvcConfigurationSupport {
 
     /**
      * <h2>添加拦截器配置</h2>

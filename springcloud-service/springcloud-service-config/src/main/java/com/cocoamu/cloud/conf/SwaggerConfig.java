@@ -31,8 +31,8 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 // 选择展示哪些接口
                 .select()
-                // 只有 com.imooc.ecommerce 包内的才去展示
-                .apis(RequestHandlerSelectors.basePackage("com.imooc.ecommerce"))
+                // 只有 com.cocoamu.cloud 包内的才去展示
+                .apis(RequestHandlerSelectors.basePackage("com.cocoamu.cloud"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -43,10 +43,10 @@ public class SwaggerConfig {
     public ApiInfo apiInfo() {
 
         return new ApiInfoBuilder()
-                .title("imooc-micro-service")
-                .description("e-commerce-springcloud-service")
+                .title("springcloud-service")
+                .description("springcloud-service")
                 .contact(new Contact(
-                        "Qinyi", "www.imooc.com", "Qinyi@imooc.com"
+                        "cocoamu", "www.cococamu.com", "422943393@qq.com"
                 ))
                 .version("1.0")
                 .build();
