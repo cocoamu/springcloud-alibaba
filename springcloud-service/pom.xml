@@ -13,6 +13,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>springcloud-service-config</module>
+        <module>springcloud-account-service</module>
+        <module>springcloud-service-sdk</module>
+        <module>springcloud-goods-service</module>
     </modules>
     <packaging>pom</packaging>
 
