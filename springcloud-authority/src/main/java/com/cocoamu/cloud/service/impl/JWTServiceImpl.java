@@ -6,8 +6,8 @@ import com.cocoamu.cloud.constant.CommonConstant;
 import com.cocoamu.cloud.service.IJWTService;
 import com.cocoamu.cloud.vo.LoginUserInfo;
 import com.cocoamu.cloud.vo.UsernameAndPassword;
-import com.cocoamu.cloud.dao.EcommerceUserDao;
-import com.cocoamu.cloud.entity.EcommerceUser;
+import com.cocoamu.cloud.dao.UserDao;
+import com.cocoamu.cloud.entity.User;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.extern.slf4j.Slf4j;
@@ -33,9 +33,9 @@ import java.util.UUID;
 @Transactional(rollbackFor = Exception.class)
 public class JWTServiceImpl implements IJWTService {
 
-    private final EcommerceUserDao ecommerceUserDao;
+    private final UserDao ecommerceUserDao;
 
-    public JWTServiceImpl(EcommerceUserDao ecommerceUserDao) {
+    public JWTServiceImpl(UserDao ecommerceUserDao) {
         this.ecommerceUserDao = ecommerceUserDao;
     }
 
@@ -50,7 +50,7 @@ public class JWTServiceImpl implements IJWTService {
             throws Exception {
 
         // 首先需要验证用户是否能够通过授权校验, 即输入的用户名和密码能否匹配数据表记录
-        EcommerceUser ecommerceUser = ecommerceUserDao.findByUsernameAndPassword(
+        User ecommerceUser = ecommerceUserDao.findByUsernameAndPassword(
                 username, password
         );
         if (null == ecommerceUser) {
@@ -89,14 +89,14 @@ public class JWTServiceImpl implements IJWTService {
             throws Exception {
 
         // 先去校验用户名是否存在, 如果存在, 不能重复注册
-        EcommerceUser oldUser = ecommerceUserDao.findByUsername(
+        User oldUser = ecommerceUserDao.findByUsername(
                 usernameAndPassword.getUsername());
         if (null != oldUser) {
             log.error("username is registered: [{}]", oldUser.getUsername());
             return null;
         }
 
-        EcommerceUser ecommerceUser = new EcommerceUser();
+        User ecommerceUser = new User();
         ecommerceUser.setUsername(usernameAndPassword.getUsername());
         ecommerceUser.setPassword(usernameAndPassword.getPassword());   // MD5 编码以后
         ecommerceUser.setExtraInfo("{}");

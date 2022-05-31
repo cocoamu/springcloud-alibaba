@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @Slf4j
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class JWTServiceTest {
+public class  JWTServiceTest {
 
     @Autowired
     private IJWTService ijwtService;
@@ -25,7 +25,7 @@ public class JWTServiceTest {
     public void testGenerateAndParseToken() throws Exception {
 
         String jwtToken = ijwtService.generateToken(
-                "ImoocQinyi@imooc.com",
+                "422943393@qq.com",
                 "25d55ad283aa400af464c76d713c07ad"
         );
         log.info("jwt token is: [{}]", jwtToken);

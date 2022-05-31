@@ -4,6 +4,7 @@ package com.cocoamu.cloud.controller;
 import com.cocoamu.cloud.config.ProjectConfig;
 import com.cocoamu.cloud.service.NacosClientService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

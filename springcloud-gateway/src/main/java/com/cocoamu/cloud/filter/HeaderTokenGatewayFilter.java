@@ -15,9 +15,9 @@ public class HeaderTokenGatewayFilter implements GatewayFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
-        // 从 HTTP Header 中寻找 key 为 token, value 为 imooc 的键值对
+        // 从 HTTP Header 中寻找 key 为 token, value 为 cocoamu 的键值对
         String name = exchange.getRequest().getHeaders().getFirst("token");
-        if ("imooc".equals(name)) {
+        if ("cocoamu".equals(name)) {
             return chain.filter(exchange);
         }
 

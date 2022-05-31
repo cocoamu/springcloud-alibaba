@@ -15,5 +15,5 @@ public final class CommonConstant {
     public static final String JWT_USER_INFO_KEY = "e-commerce-user";
 
     /** 授权中心的 service-id */
-    public static final String AUTHORITY_CENTER_SERVICE_ID = "e-commerce-authority-center";
+    public static final String AUTHORITY_CENTER_SERVICE_ID = "springcloud-authority";
 }

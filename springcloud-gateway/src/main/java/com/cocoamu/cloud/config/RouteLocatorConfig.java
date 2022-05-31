@@ -22,8 +22,8 @@ public class RouteLocatorConfig {
                 .route(
                         "e_commerce_authority",
                         r -> r.path(
-                                "/imooc/e-commerce/login",
-                                "/imooc/e-commerce/register"
+                                "/gateway/cocoamu/login",
+                                "/gateway/cocoamu/register"
                                 ).uri("http://localhost:9001/")
                 ).build();
     }

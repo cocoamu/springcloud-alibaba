@@ -25,8 +25,8 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-@Table(name = "t_ecommerce_user")
-public class EcommerceUser implements Serializable {
+@Table(name = "t_user")
+public class User implements Serializable {
 
     /** 自增主键 */
     @Id
