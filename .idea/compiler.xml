@@ -10,6 +10,7 @@
         <module name="springcloud-mvc" />
         <module name="springcloud-gateway" />
         <module name="springcloud-account-service" />
+        <module name="springcloud-hystrix-dashboard" />
         <module name="springcloud-common" />
         <module name="springcloud-authority" />
         <module name="springcloud-service-sdk" />
@@ -28,6 +29,7 @@
       <module name="springcloud-common" options="-parameters" />
       <module name="springcloud-gateway" options="-parameters" />
       <module name="springcloud-goods-service" options="-parameters" />
+      <module name="springcloud-hystrix-dashboard" options="-parameters" />
       <module name="springcloud-mvc" options="-parameters" />
       <module name="springcloud-service" options="-parameters" />
       <module name="springcloud-service-config" options="-parameters" />

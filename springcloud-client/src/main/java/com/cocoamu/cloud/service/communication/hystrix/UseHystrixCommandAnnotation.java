@@ -25,7 +25,7 @@ public class UseHystrixCommandAnnotation {
 
     @HystrixCommand(
             // 用于对 Hystrix 命令进行分组, 分组之后便于统计展示于仪表盘、上传报告和预警等等
-            // 内部进行度量统计时候的分组标识, 数据上报和统计的最小维度就是 groupKey
+            // 内部进行度量统计时候的分组标识, 数据上报和统计的最小维度就是 groupKey 不配置的话也会有一个默认值
             groupKey = "NacosClientService",
             // HystrixCommand 的名字, 默认是当前类的名字, 主要方便 Hystrix 进行监控、报警等
             commandKey = "NacosClientService",

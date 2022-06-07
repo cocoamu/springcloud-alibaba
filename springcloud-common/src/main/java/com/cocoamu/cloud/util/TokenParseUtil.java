@@ -46,7 +46,6 @@ public class TokenParseUtil {
      * <h2>通过公钥去解析 JWT Token</h2>
      * */
     private static Jws<Claims> parseToken(String token, PublicKey publicKey) {
-
         return Jwts.parser().setSigningKey(publicKey).parseClaimsJws(token);
     }
 
