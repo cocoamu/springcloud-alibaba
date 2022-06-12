@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "project",
+      "type": "com.cocoamu.cloud.config.ProjectConfig",
+      "sourceType": "com.cocoamu.cloud.config.ProjectConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "project.author",
+      "type": "java.lang.String",
+      "sourceType": "com.cocoamu.cloud.config.ProjectConfig"
+    },
+    {
+      "name": "project.name",
+      "type": "java.lang.String",
+      "sourceType": "com.cocoamu.cloud.config.ProjectConfig"
+    },
+    {
+      "name": "project.org",
+      "type": "java.lang.String",
+      "sourceType": "com.cocoamu.cloud.config.ProjectConfig"
+    },
+    {
+      "name": "project.version",
+      "type": "java.lang.String",
+      "sourceType": "com.cocoamu.cloud.config.ProjectConfig"
+    }
+  ],
+  "hints": []
+}

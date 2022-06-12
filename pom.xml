@@ -17,6 +17,7 @@
         <module>springcloud-gateway</module>
         <module>springcloud-service</module>
         <module>springcloud-hystrix-dashboard</module>
+        <module>springcloud-stream-client</module>
     </modules>
 
     <packaging>pom</packaging>

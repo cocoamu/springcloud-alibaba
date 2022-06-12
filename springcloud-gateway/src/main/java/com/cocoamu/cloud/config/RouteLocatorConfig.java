@@ -20,7 +20,7 @@ public class RouteLocatorConfig {
         // 手动定义 Gateway 路由规则需要指定 id、path 和 uri
         return builder.routes()
                 .route(
-                        "e_commerce_authority",
+                        "springcloud_authority",
                         r -> r.path(
                                 "/gateway/cocoamu/login",
                                 "/gateway/cocoamu/register"

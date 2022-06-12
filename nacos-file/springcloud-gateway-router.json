@@ -1,6 +1,6 @@
 [
   {
-    "id": "e-commerce-nacos-client",
+    "id": "springcloud-nacos-client",
     "predicates": [
       {
         "args": {
