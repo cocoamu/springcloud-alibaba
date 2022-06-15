@@ -6,18 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springcloud-gateway" />
+        <module name="springcloud-service-sdk" />
+        <module name="springcloud-service-config" />
+        <module name="springcloud-client" />
         <module name="springcloud-goods-service" />
         <module name="springcloud-mvc" />
         <module name="springcloud-stream-client" />
-        <module name="springcloud-gateway" />
         <module name="springcloud-account-service" />
+        <module name="springcloud-order-service" />
         <module name="springcloud-hystrix-dashboard" />
         <module name="springcloud-common" />
         <module name="springcloud-authority" />
-        <module name="springcloud-service-sdk" />
-        <module name="springcloud-service-config" />
         <module name="springcloud-admin" />
-        <module name="springcloud-client" />
       </profile>
     </annotationProcessing>
   </component>
@@ -32,6 +33,7 @@
       <module name="springcloud-goods-service" options="-parameters" />
       <module name="springcloud-hystrix-dashboard" options="-parameters" />
       <module name="springcloud-mvc" options="-parameters" />
+      <module name="springcloud-order-service" options="-parameters" />
       <module name="springcloud-service" options="-parameters" />
       <module name="springcloud-service-config" options="-parameters" />
       <module name="springcloud-service-sdk" options="-parameters" />

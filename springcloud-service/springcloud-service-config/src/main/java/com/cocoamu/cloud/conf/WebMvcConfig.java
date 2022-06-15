@@ -1,5 +1,6 @@
 package com.cocoamu.cloud.conf;
 
+import com.alibaba.cloud.seata.web.SeataHandlerInterceptor;
 import com.cocoamu.cloud.filter.LoginUserInfoInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -21,6 +22,9 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
         // 添加用户身份统一登录拦截的拦截器
         registry.addInterceptor(new LoginUserInfoInterceptor())
                 .addPathPatterns("/**").order(0);
+        // Seata 传递 xid 事务 id 给其他的微服务
+        // 只有这样, 其他的服务才会写 undo_log, 才能够实现回滚
+        registry.addInterceptor(new SeataHandlerInterceptor()).addPathPatterns("/**");
     }
 
     /**
