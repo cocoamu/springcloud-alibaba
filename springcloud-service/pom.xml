@@ -17,6 +17,7 @@
         <module>springcloud-service-sdk</module>
         <module>springcloud-goods-service</module>
         <module>springcloud-order-service</module>
+        <module>springcloud-logistics-service</module>
     </modules>
     <packaging>pom</packaging>
 

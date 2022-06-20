@@ -7,10 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-gateway" />
+        <module name="e-commerce-order-service" />
+        <module name="e-commerce-logistics-service" />
         <module name="springcloud-service-sdk" />
         <module name="springcloud-service-config" />
+        <module name="springcloud-logistics-service" />
         <module name="springcloud-client" />
         <module name="springcloud-goods-service" />
+        <module name="springcloud-sentinel-client" />
         <module name="springcloud-mvc" />
         <module name="springcloud-stream-client" />
         <module name="springcloud-account-service" />
@@ -19,11 +23,15 @@
         <module name="springcloud-common" />
         <module name="springcloud-authority" />
         <module name="springcloud-admin" />
+        <module name="e-commerce-goods-service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="e-commerce-goods-service" options="-parameters" />
+      <module name="e-commerce-logistics-service" options="-parameters" />
+      <module name="e-commerce-order-service" options="-parameters" />
       <module name="springcloud-account-service" options="-parameters" />
       <module name="springcloud-admin" options="-parameters" />
       <module name="springcloud-authority" options="-parameters" />
@@ -32,8 +40,10 @@
       <module name="springcloud-gateway" options="-parameters" />
       <module name="springcloud-goods-service" options="-parameters" />
       <module name="springcloud-hystrix-dashboard" options="-parameters" />
+      <module name="springcloud-logistics-service" options="-parameters" />
       <module name="springcloud-mvc" options="-parameters" />
       <module name="springcloud-order-service" options="-parameters" />
+      <module name="springcloud-sentinel-client" options="-parameters" />
       <module name="springcloud-service" options="-parameters" />
       <module name="springcloud-service-config" options="-parameters" />
       <module name="springcloud-service-sdk" options="-parameters" />

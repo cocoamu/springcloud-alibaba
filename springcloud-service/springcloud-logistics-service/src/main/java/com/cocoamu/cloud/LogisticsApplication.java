@@ -8,18 +8,16 @@ import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 /**
- * <h1>用户账户微服务启动入口</h1>
- * 127.0.0.1:8003/springcloud-account-service/swagger-ui.html
- * 127.0.0.1:8003/springcloud-account-service/doc.html
+ * <h1>物流微服务启动入口</h1>
  * */
-@EnableJpaAuditing
-@SpringBootApplication
-@EnableDiscoveryClient
 @Import(DataSourceProxyAutoConfiguration.class)
-public class AccountApplication {
+@EnableJpaAuditing
+@EnableDiscoveryClient
+@SpringBootApplication
+public class LogisticsApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(AccountApplication.class, args);
+        SpringApplication.run(LogisticsApplication.class, args);
     }
 }

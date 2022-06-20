@@ -5,6 +5,7 @@ import com.cocoamu.cloud.service.IJWTService;
 import com.cocoamu.cloud.vo.JwtToken;
 import com.cocoamu.cloud.vo.UsernameAndPassword;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.shenyu.client.springcloud.annotation.ShenyuSpringCloudClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping("/authority")
+@ShenyuSpringCloudClient(path = "/**")
 public class AuthorityController {
 
     private final IJWTService ijwtService;
